@@ -10,6 +10,15 @@ execute:
 ```{r}
 library(tidyverse)
 library(primer.data)
+library(tidymodels)
+library(broom)
 ```
 
-Voting behavior is a categorical outcome often shaped by demographic covariates such as sex. We use the 2020 American National Election Study, which surveyed roughly 2,500 U.S. adults around Election Day, to examine how a respondent’s sex predicts their presidential vote choice.
+Voting behavior is a categorical outcome often shaped by demographic covariates such as sex. We use the 2020 American National Election Study, which surveyed roughly 2,500 U.S. adults around Election Day, to examine how a respondent’s sex predicts their presidential vote choice. However, because the NES respondents may underrepresent certain demographic groups, our estimated relationship between sex and vote choice could be biased by nonresponse and thus may not generalize to the full electorate.
+
+
+$$
+Y_i \;=\; \beta_0 \;+\; \beta_1 X_{1i} \;+\; \beta_2 X_{2i} \;+\;\cdots+\; \beta_p X_{pi} \;+\; \varepsilon_i
+$$
+
+
