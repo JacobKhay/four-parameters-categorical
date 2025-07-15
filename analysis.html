@@ -199,8 +199,11 @@ window.Quarto = {
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'marginaleffects' was built under R version 4.5.1</code></pre>
 </div>
-<p>Voting behavior is a categorical outcome often shaped by demographic covariates such as sex. We use the 2020 American National Election Study, which surveyed roughly 2,500 U.S. adults around Election Day, to examine how a respondent’s sex predicts their presidential vote choice. However, because the NES respondents may underrepresent certain demographic groups, our estimated relationship between sex and vote choice could be biased by nonresponse and thus may not generalize to the full electorate.</p>
+</div>
+<p>Voting behavior is a categorical outcome often shaped by demographic covariates such as sex. We use the 2020 American National Election Study, which surveyed roughly 2,500 U.S. adults around Election Day, to examine how a respondent’s sex predicts their presidential vote choice. However, because the NES respondents may underrepresent certain demographic groups, our estimated relationship between sex and vote choice could be biased by nonresponse and thus may not generalize to the full electorate. We model voter preference as a multinomial logistic function of respondent sex. We estimate that being female increases the log‑odds of voting for Clinton by 0.122 (95 % CI: 0.05 to 0.19). Our estimated effect may be biased if the model omits key confounders (like party ID or ideology), if the sample underrepresents certain groups, or if the log‑odds scale poorly captures nonlinearities, in which case our 0.122 estimate and 95 % CI (0.05–0.19) could be both off center and too narrow. For instance, adjusting for party identification might shrink the estimated effect to around 0.08 with a wider 95 % CI of –0.02 to 0.18, reflecting greater uncertainty once those additional sources of variation are accounted for.</p>
 <p><span class="math display">\[
 Y_i \;=\; \beta_0 \;+\; \beta_1 X_{1i} \;+\; \beta_2 X_{2i} \;+\;\cdots+\; \beta_p X_{pi} \;+\; \varepsilon_i
 \]</span> <span class="math display">\[
@@ -701,6 +704,15 @@ Y_i \;=\; \beta_0 \;+\; \beta_1 X_{1i} \;+\; \beta_2 X_{2i} \;+\;\cdots+\; \beta
 </tbody>
 </table>
 
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
