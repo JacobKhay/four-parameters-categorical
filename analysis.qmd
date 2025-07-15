@@ -2,5 +2,14 @@
 title: "Four Parameters Categorical"
 format: html
 author: "Jacob Khaykin"
+execute: 
+  echo: false
 ---
 
+
+```{r}
+library(tidyverse)
+library(primer.data)
+```
+
+Voting behavior is a categorical outcome often shaped by demographic covariates such as sex. We use the 2020 American National Election Study, which surveyed roughly 2,500 U.S. adults around Election Day, to examine how a respondent’s sex predicts their presidential vote choice.
